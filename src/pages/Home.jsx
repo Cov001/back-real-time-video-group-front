@@ -23,10 +23,7 @@ const Home = () => {
   } = useForm();
 
   useEffect(() => {
-    const url =
-      process.env.NODE_ENV === "production"
-        ? "https://back-real-time-video-group-back.onrender.com"
-        : "http://localhost:5000";
+    const url = "https://back-real-time-video-group-back.onrender.com";
 
     console.log(`Environment: ${process.env.NODE_ENV}`);
     const socket = io(url, {});
